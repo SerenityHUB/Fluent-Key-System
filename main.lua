@@ -1,11 +1,12 @@
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/SerenityHUB/CustomFluent/main/Fluent"))() -- Set your fluent fork/default fluent
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/SerenityHUB/Fluent/master/main.lua"))() -- Modified Fluent
+-- local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))() -- Original fluent
 local Window = Fluent:CreateWindow({
-    Title = "SKS" ..  0.1,
+    Title = "SKS",
     SubTitle = "Serenity Key System",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true,
-    Theme = "Darker", -- Set "Dark" theme for dark theme, "Stingray" for stingray (ONLY IF YOU USING SERENITYHUB FLUENT)
+    Theme = "Darker", -- Set "Dark" theme for dark theme
     MinimizeKey = Enum.KeyCode.LeftControl
 })
 
@@ -17,7 +18,7 @@ Tabs.Key:AddInput("KeyInput", {
     Title = "Key System",
     Placeholder = "Type key here",
     Callback = function(Value)
-        if Value == "huesos" then -- Set your key here
+        if Value == "Fun Key" then -- Set your key here
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))() -- Set your script for load
             Window:Destroy()
 			-- Use "else" if you want to notify when key is invalid
@@ -33,7 +34,7 @@ Tabs.Key:AddButton({
         Fluent:Notify({
             Title = "Copied!",
             Content = "Copied Link to clipboard!",
-            Duration = 4
+            Duration = 4 -- Set notify duration here, set nil for notify not disappear
         })
     end
 })
