@@ -19,9 +19,8 @@ Tabs.Key:AddInput("KeyInput", {
     Placeholder = "Type key here",
     Callback = function(Value)
         if Value == "Fun Key" then -- Set your key here
+	    Window:Destroy()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))() -- Set your script for load
-            Window:Destroy()
-			-- Use "else" if you want to notify when key is invalid
         end
     end
 })
