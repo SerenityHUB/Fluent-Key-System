@@ -25,7 +25,7 @@ Tabs.Key:AddInput("KeyInput", {
     Callback = function(Value)
         if table.find(Keys, Value) then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
-													-- // ^ Set your script to load
+						-- // ^ Set your script to load
             Window:Destroy()
         end
     end
@@ -36,7 +36,7 @@ Tabs.Key:AddButton({
     Description = "No Linkvertise/Lootlabs",
     Callback = function()
         setclipboard("https://discord.gg/gmBxyhkR")
-				-- // ^ Set your discord server here
+		-- // ^ Set your discord server here
         Fluent:Notify({
             Title = "Copied!",
             Content = "Copied Link to clipboard!",
