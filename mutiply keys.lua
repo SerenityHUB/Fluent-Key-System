@@ -24,9 +24,9 @@ Tabs.Key:AddInput("KeyInput", {
     Placeholder = "Type key here",
     Callback = function(Value)
         if table.find(Keys, Value) then
+	    Window:Destroy()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
 						-- // ^ Set your script to load
-            Window:Destroy()
         end
     end
 })
